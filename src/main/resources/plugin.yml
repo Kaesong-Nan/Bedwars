@@ -1,0 +1,77 @@
+name: Bedwars
+version: 1.0.0
+main: de.tubeplay.bedwars.Bedwars
+author: Majo
+permissions:
+  tubeplay.joinLevel10:
+    description: Alle mit tubeplay.joinLevel9 oder niedriger werden gekickt, um selbst joinen zu koennen.
+  tubeplay.joinLevel9:
+    description: Alle mit tubeplay.joinLevel8 oder niedriger werden gekickt, um selbst joinen zu koennen.
+  tubeplay.joinLevel8:
+    description: Alle mit tubeplay.joinLevel7 oder niedriger werden gekickt, um selbst joinen zu koennen.
+  tubeplay.joinLevel7:
+    description: Alle mit tubeplay.joinLevel6 oder niedriger werden gekickt, um selbst joinen zu koennen.
+  tubeplay.joinLevel6:
+    description: Alle mit tubeplay.joinLevel5 oder niedriger werden gekickt, um selbst joinen zu koennen.
+  tubeplay.joinLevel5:
+    description: Alle ohne eine tubeplay.joinLevel-Permission werden gekickt, um selbst joinen zu koennen.
+  tubeplay.start:
+    description: Das Spiel kann gestartet werden.
+  tubeplay.forcemap:
+    description: Es kann eine Map erzwungen werden.
+  tubeplay.forcemap.admin:
+    description: Es kann eine Map auch dann erzwungen werden, wenn bereits eine erzwungen wurde.
+  tubeplay.send:
+    description: Es kann jederzeit das Team gewechselt werden.
+  tubeplay.deleteStats:
+    description: Gibt Rechte Stats von Spielern zu löschen und die Stats für den Rest einer Runde zu deaktivieren.
+commands:
+  start:
+    description: Startet die Runde sofort.
+    usage: /start oder /start <Sekunden>
+    permission: tubeplay.start
+    permission-message: Du hast keine Rechte, um die Runde zu starten!
+  disablestats:
+    description: Erlaubt es die Stats bis zum Ende einer Runde zu deaktivieren.
+    usage: /disablestats
+    permission: tubeplay.deleteStats
+    permission-message: Du hast keine Rechte, um Stats zu deaktivieren!
+  spawn:
+    description: Teleportiert in der Wartelobby zum Spawn.
+    usage: /spawn
+  playtime:
+    description: Erlaubt es die Spielzeit eines Spielers in Bedwars zu sehen.
+    usage: /playtime oder /playtime <Spielername>
+  see:
+    description: Macht einen gegenueber allen anderen Spielern sichtbar.
+    usage: /see
+    permission: tubeplay.see
+    permission-message: Du hast keine Rechte dich gegenueber allen Spielern sichtbar zu machen!
+  build:
+    description: Man wird in den Baumodus versetzt.
+    usage: /build oder /build <Spielername>
+    permission: tubeplay.build
+    permission-message: Du hast keine Rechte dich in den Baumodus zu begeben!
+  gm:
+    description: Man wird je nach dem in welchem Modus man bereits ist in den Kreativ- oder Überlebensmodus versetzt.
+    usage: /gm oder /gm <Spielername>
+  send:
+    description: Erlaubt es jederzeit das Team zu wechseln.
+    usage: /send <rot/grün/blau/gelb/spec> oder /send <Spielername> <rot/grün/blau/gelb/spec>
+    permission: tubeplay.send
+    permission-message: Du hast keine Rechte das Team jederzeit zu wechseln!
+  stats:
+    usage: /stats [global/monthly/daily] oder /stats <Spielername> [global/monthly/daily] oder /stats delete <Spielername> [global/monthly/daily]
+    description: Man kann sich die Stats anderer Spieler anschauen oder die Stats eines bestimmten Spielers löschen.
+  top:
+    usage: /top oder /top <global/monthly/daily>
+    description: Zeigt die Top 10 Spieler an.
+  all:
+    description: Erlaubt es in den @all-Chat zu schreiben.
+    usage: /all <Nachricht> (Nur, wenn das Spiel gestartet ist)
+  a:
+    description: Erlaubt es in den @all-Chat zu schreiben.
+    usage: /a <Nachricht> (Nur, wenn das Spiel gestartet ist)
+  map:
+    description: Zeigt an von wem die Map gebaut wurde, auf der man sich befindet.
+    usage: /map
